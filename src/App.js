@@ -1,25 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import NavBar from './components/NavBar';
+import DaisyNavBar from './components/DaisyNavBar';
 function App() {
   return (
     <div className="App">
-      <h1>Bienvenidos a Macchiato, Cafeteria de Especialidad</h1>
-      <h2>Servicio de Barista.</h2>
-      {/*<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>*/}
+      <DaisyNavBar/>
+     
+      <h3 className="text-4xl font-bold">Bienvenidos a Macchiato, Cafeteria de Especialidad</h3>
+      <h2 className="text-3xl font-bold">Servicio de Barista.</h2>
+      
     </div>
   );
 }
