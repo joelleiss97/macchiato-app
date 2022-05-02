@@ -1,56 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import './style/ItemCount.css';
 
+const ItemCount = ({initial, stock, onAdd}) => {
 
-const ItemCount = () => {
-    const [count,setCount] = useState(1)
-    const [stock] = useState(10)
-    console.log('empieza el contador');
+    const [count, setCount] = useState(initial);
 
-    const addHandler =() => {
-        console.log('Se esta sumando el contador');
-        setCount( count + 1)
-    }
+    const addProduct =(num) =>{
+        setCount(count + num);
+    };
 
-    const restHandler =() => {
-        console.log('Se esta restando el contador');
-        setCount( count - 1)
-    }
-
-    useEffect(  () => {
-        console.log('[useEffect] el componente se monto');
-      } , [])
-    
-      useEffect(  () => {
-        console.log('[useEffect] el componente se cambio');
-      } , [count])
-    return (
-
-
-    <>
-    
-    <div class="card w-60 bg-base-100 shadow-xl items-center text-center">
-        <div class="card-body items-center text-center">
-            <h2 class="card-title">ItemCount</h2>
-            <strong> {count} </strong>
-            <div class="card-actions justify-end">
-                <button class="btn btn-primary" onClick={restHandler}> - </button>
-                <button class="btn btn-primary" onClick={addHandler}> + </button>  
-            </div>
-            <div class="card-actions">
-                <button class="btn btn-primary">Incrementar</button>
-            </div>
+  return (
+    <div className='countContainer'>
+        <div className='countContador'>
+            <button
+                className='countButton'
+                onClick={() => addProduct(-1)}
+                disabled={count === initial ? true : null}
+            >
+                -
+            </button>
+            <span className='countCo'>{count}</span>
+            <button
+                className='countButton'
+                onClick={() => addProduct(+1)}
+                disabled={count === stock ? true : null}
+            >
+                +
+            </button>
         </div>
+        <button
+            className='button-primary'
+            onClick={() => onAdd(count)}
+            disabled={count === 0 ? true : null}
+
+        >
+
+            <p>Agregar</p> 
+        </button>
     </div>
-    
-    
-    
-    
-    </>
-
-
-
-
-   
   )
 }
 

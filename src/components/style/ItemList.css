@@ -1,0 +1,8 @@
+.productListContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    gap: 20px 45px;
+    margin: 20px 10px;
+    
+}

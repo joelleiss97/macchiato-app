@@ -3,6 +3,7 @@ import CartWidget from './CartWidget'
 
 const DaisyNavBar = () => {
   return (
+
     <div className="navbar bg-base-100 bg-base-content "><font></font>
         <div className="navbar-start bg-base-300 "><font></font>
             <div className="dropdown"><font></font>
@@ -39,8 +40,7 @@ const DaisyNavBar = () => {
                     </div>
             
         </div><font></font>
-    </div>
-  )
-}
+    </div> 
+    )}
 
 export default DaisyNavBar

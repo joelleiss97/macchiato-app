@@ -1,0 +1,14 @@
+.ItemListContainer {
+    width: 100%;
+    min-height: 60vh;
+    padding: 30px;
+    margin-bottom: 60px;
+    background-color: black;
+}
+
+.ItemListContainerTittle{
+    color: rgb(196, 103, 41);
+    font-size: 45px;
+    margin: 25px 0;
+    text-align: center;
+}
